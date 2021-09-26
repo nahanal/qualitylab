@@ -16,6 +16,23 @@
 <br> Используется pipenv в проекте следующим образом: нужно перейти в папку с проектом, убедиться, что присутствуют файл Pipfile и выполнить команду `pipenv install Pipfile`
 <br> Устанавливать новые библиотеки командой `pipenv install lib-name`
 <br />
+
+##Установить geckodriver:
+
+1. Выбрать соответствующую версию на [странице релизов](https://github.com/mozilla/geckodriver/releases) и скачать ее.
+Пример: <br>```
+wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0
+/geckodriver-v0.24.0-linux64.tar.gz ```<br>
+2. Извлечь файл:
+<br>```
+tar -xvzf geckodriver* ```<br>
+3. Сделать его исполняемым:
+<br>```
+chmod +x geckodriver ```<br>
+4. Добавить в PATH, чтобы можно было его легко найти:
+<br>```
+export PATH=$PATH:/path-to-extracted-file/.```<br>
+
 ## Рекомендации
 ```
 1. Pycharm Community
@@ -23,6 +40,7 @@
 из файлика requirements.txt
 3. Окружение от Pycharm (предпочтительно), можно и pipenv, но Pycharm 
 сам позволяет настроить отдельную среду без лишних манипуляций
+4. Для корректной работы Firefox нужен geckodriver
 ```
 ## Конфиги
 Используются конфиг: email.config. Примеры конфигов лежат в корне проекта.
